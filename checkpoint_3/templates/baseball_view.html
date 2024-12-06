@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Baseball Leagues</title>
+        <style>
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                color: #f39c12;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                padding: 12px;
+                text-align: center;
+                border: 1px solid #444;
+            }
+
+            th {
+                background-color: #333;
+                color: #f39c12;
+            }
+
+            td a {
+                color: #f39c12;
+                text-decoration: none;
+                font-size: 1.1rem;
+                transition: color 0.3s;
+            }
+
+            td a:hover {
+                color: #e67e22;
+            }
+
+            .return-link {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .return-link a {
+                color: #f39c12;
+                text-decoration: none;
+                font-size: 1.1rem;
+                padding: 10px;
+                background-color: #333;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .return-link a:hover {
+                background-color: #f39c12;
+                color: #121212;
+            }
+
+            .add-league {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                font-size: 1.1rem;
+            }
+
+            .add-league a {
+                color: #f39c12;
+                text-decoration: none;
+            }
+
+            .add-league a:hover {
+                color: #e67e22;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return-link">
+            <a href="javascript:history.back()">Return</a>
+        </div>
+
+        <h1>Available Leagues</h1>
+        <table>
+            <tr>
+                <th>League Name</th>
+            </tr>
+            {% for league in leagues %}
+            <tr>
+                <td>
+                    <a href="/league_teams/{{ league.league_id }}">{{ league.league_name }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="add-league">
+            <a href="/add_new_league">Add a new league?</a>
+        </div>
+    </body>
+</html>

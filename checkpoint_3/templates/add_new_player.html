@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add New Player</title>
+        <style>
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                color: #f39c12;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            form {
+                width: 80%;
+                max-width: 500px;
+                margin: 20px auto;
+                background-color: #1e1e1e;
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            label {
+                font-size: 1.1rem;
+                margin-bottom: 5px;
+                display: block;
+            }
+
+            input {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 20px;
+                background-color: #333;
+                color: #e0e0e0;
+                border: 1px solid #444;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+
+            button {
+                background-color: #f39c12;
+                color: #121212;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1.1rem;
+                transition: background-color 0.3s;
+                width: 100%;
+            }
+
+            button:hover {
+                background-color: #e67e22;
+            }
+
+            .return-link {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .return-link a {
+                color: #f39c12;
+                text-decoration: none;
+                font-size: 1.1rem;
+                padding: 10px;
+                background-color: #333;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            .return-link a:hover {
+                background-color: #f39c12;
+                color: #121212;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Add a Player to {{ team.team_name }}</h1>
+        <form action="/add_new_player/{{ team.team_id }}" method="POST">
+            <label for="player_name">Player Name:</label>
+            <input type="text" id="player_name" name="player_name" placeholder="Enter Player Name" required><br><br>
+
+            <label for="player_number">Player Number:</label>
+            <input type="number" id="player_number" name="player_number" placeholder="Enter Player Number" required><br><br>
+
+            {% if sport == "Basketball" %}
+                <label for="points_per_game">Points/Game:</label>
+                <input type="number" id="points_per_game" name="points_per_game" step="0.1" placeholder="Enter Points/Game"><br><br>
+                
+                <label for="assists_per_game">Assists/Game:</label>
+                <input type="number" id="assists_per_game" name="assists_per_game" step="0.1" placeholder="Enter Assists/Game"><br><br>
+                
+                <label for="rebounds_per_game">Rebounds/Game:</label>
+                <input type="number" id="rebounds_per_game" name="rebounds_per_game" step="0.1" placeholder="Enter Rebounds/Game"><br><br>
+            {% elif sport == "Baseball" %}
+                <label for="batting_avg">Batting Average:</label>
+                <input type="number" id="batting_avg" name="batting_avg" step="0.001" placeholder="Enter Batting Avg"><br><br>
+                
+                <label for="lifetime_hits">Lifetime Hits:</label>
+                <input type="number" id="lifetime_hits" name="lifetime_hits" placeholder="Enter Lifetime Hits"><br><br>
+                
+                <label for="lifetime_rbi">Lifetime RBI:</label>
+                <input type="number" id="lifetime_rbi" name="lifetime_rbi" placeholder="Enter Lifetime RBI"><br><br>
+            {% elif sport == "Football" %}
+                <label for="lifetime_yards">Lifetime Yards:</label>
+                <input type="number" id="lifetime_assists" name="lifetime_yards" placeholder="Enter Lifetime Yards"><br><br>
+                
+                <label for="lifetime_td">Lifetime Touchdowns:</label>
+                <input type="number" id="lifetime_td" name="lifetime_td" placeholder="Enter Lifetime Touchdowns"><br><br>
+                
+                <label for="lifetime_intercept">Lifetime Interceptions:</label>
+                <input type="number" id="lifetime_intercept" name="lifetime_intercept" placeholder="Enter Lifetime Interceptions"><br><br>
+            {% elif sport == "Soccer" %}
+                <label for="goals_scored">Goals Scored:</label>
+                <input type="number" id="goals_scored" name="goals_scored" placeholder="Enter Goals Scored"><br><br>
+                
+                <label for="assists">Assists:</label>
+                <input type="number" id="assists" name="assists" placeholder="Enter Assists"><br><br>
+                
+                <label for="shots_on_target">Shots on Target:</label>
+                <input type="number" id="shots_on_target" name="shots_on_target" placeholder="Enter Shots on Target"><br><br>
+            {% endif %}
+            
+            <button type="submit">Add Player</button>
+        </form>
+        <br>
+        <div class="return-link">
+            <a href="javascript:history.back()">Return to Roster</a>
+        </div>
+    </body>
+</html>
