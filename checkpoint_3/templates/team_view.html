@@ -4,64 +4,7 @@
         <title>Players in {{ team.team_name }}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body {
-                background-color: #121212;
-                color: #e0e0e0;
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-            h1 {
-                color: #f39c12;
-                text-align: center;
-                padding-top: 20px;
-            }
-            h3 {
-                color: #f39c12;
-                margin-top: 10px;
-            }
-            a {
-                color: #f39c12;
-                text-decoration: none;
-                font-size: 1.1rem;
-                padding: 10px;
-                background-color: #333;
-                border-radius: 5px;
-                margin: 5px;
-                display: inline-block;
-                transition: background-color 0.3s;
-            }
-            a:hover {
-                background-color: #f39c12;
-                color: #121212;
-            }
-            table {
-                width: 80%;
-                margin: 20px auto;
-                border-collapse: collapse;
-                background-color: #1e1e1e;
-            }
-            th, td {
-                padding: 15px;
-                text-align: left;
-                border-bottom: 1px solid #444;
-            }
-            th {
-                background-color: #444;
-                color: #f39c12;
-            }
-            tr:nth-child(even) {
-                background-color: #333;
-            }
-            tr:nth-child(odd) {
-                background-color: #222;
-            }
-            .return-links {
-                margin-top: 20px;
-                text-align: center;
-            }
-        </style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     </head>
 
     <body>

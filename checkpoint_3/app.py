@@ -5,7 +5,6 @@ from sqlalchemy.orm import joinedload
 
 app.secret_key = 'my_secret_key'
 
-
 # this first route will take the user to the main hub
 @app.route('/')
 def index():

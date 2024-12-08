@@ -4,65 +4,7 @@
     <title>Teams in {{ league.league_name }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Dark mode background and text color */
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: #ffffff;
-        }
-
-        /* Style for the table */
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #333;
-        }
-
-        td {
-            background-color: #222;
-        }
-
-        /* Style for the button-like links */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #555;
-        }
-
-        /* Centering the content */
-        div {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Teams in {{ league.league_name }}</h1>

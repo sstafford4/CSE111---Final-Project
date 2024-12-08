@@ -4,77 +4,7 @@
     <title>Football Leagues</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            color: #f39c12;
-            text-align: center;
-            padding-top: 20px;
-        }
-
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: #1f1f1f;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #444;
-        }
-
-        th {
-            color: #f39c12;
-        }
-
-        td a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        td a:hover {
-            color: #f39c12;
-            text-decoration: underline;
-        }
-
-        .return {
-            color: #f39c12;
-            text-decoration: none;
-            font-size: 1rem;
-            margin: 20px;
-            display: block;
-            text-align: center;
-        }
-
-        .return:hover {
-            text-decoration: underline;
-        }
-
-        a.add-league {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1rem;
-            color: #f39c12;
-            text-decoration: none;
-        }
-
-        a.add-league:hover {
-            color: #e67e22;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <a href="javascript:history.back()" class="return">Return</a>
