@@ -7,13 +7,13 @@ body {
 }
 
 h1 {
-    color: #f39c12;
+    color: #ffffff;
     text-align: center;
     padding-top: 20px;
 }
 
 h3 {
-    color: #f39c12;
+    color: #ffffff;
     margin-top: 10px;
 }
 
@@ -29,7 +29,7 @@ form {
 
 
 label {
-    color: #f39c12;
+    color: #ffffff;
     font-size: 1.1rem;
     display: block;
     margin-bottom: 8px;
@@ -85,7 +85,7 @@ button[type="submit"]:hover {
 }
 
 button {
-    background-color: #f39c12;
+    background-color: #ffffff;
     color: #121212;
     padding: 12px 20px;
     border: none;
@@ -97,7 +97,7 @@ button {
 }
 
 button:hover {
-    background-color: #e67e22;
+    background-color: #ffffff;
 }
 
 .button {
@@ -144,11 +144,11 @@ th, td {
 
 th {
     background-color: #333;
-    color: #f39c12;
+    color: #ffffff;
 }
 
 td a {
-    color: #f39c12;
+    color: #ffffff;
     background-color: #444;
     text-decoration: none;
     font-size: 1.1rem;
@@ -156,7 +156,7 @@ td a {
 }
 
 td a:hover {
-    color: #e67e22;
+    color: #ffffff;
     text-decoration: underline;
 
 }
@@ -173,7 +173,7 @@ tr:nth-child(odd) {
 }
 
 .return {
-    color: #f39c12;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
     margin: 20px;
@@ -191,7 +191,7 @@ tr:nth-child(odd) {
 }
 
 .return-link a {
-    color: #f39c12;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.1rem;
     padding: 10px;
@@ -204,7 +204,7 @@ tr:nth-child(odd) {
 }
 
 .return-link a:hover {
-    background-color: #f39c12;
+    background-color: #ffffff;
     color: #121212;
 }
 
@@ -216,12 +216,12 @@ tr:nth-child(odd) {
 }
 
 .add-league a {
-    color: #f39c12;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .add-league a:hover {
-    color: #e67e22;
+    color: #ffffff;
 }
 
 a.add-league {
@@ -229,12 +229,12 @@ a.add-league {
     text-align: center;
     margin-top: 20px;
     font-size: 1rem;
-    color: #f39c12;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a.add-league:hover {
-    color: #e67e22;
+    color: #ffffff;
 }
 
 
